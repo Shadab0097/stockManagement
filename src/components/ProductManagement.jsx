@@ -82,9 +82,11 @@ const ProductManagement = () => {
           { withCredentials: true }
 
         );
+
         setIsUpdateTrue(true)
         if (response.status === 200) {
           setIsToastVisible(true);
+          setEditingUser(false)
 
         }
 
@@ -93,7 +95,7 @@ const ProductManagement = () => {
       } else {
         // Add new user
         setIsUpdateTrue(false)
-        setEditingProduct(false)
+
 
         const response = await axios.post(BASE_URL + 'addproduct', formData, {
           withCredentials: true,
