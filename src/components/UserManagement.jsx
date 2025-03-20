@@ -42,7 +42,7 @@ const UserManagement = () => {
 
     } catch (err) {
       console.log(err);
-      setError(err.response.data)
+      setError(err.response?.data)
     }
   };
 
@@ -106,7 +106,7 @@ const UserManagement = () => {
       setFormData({ firstName: '', lastName: '', emailId: '', password: '', role: 'user' }); // Reset form
     } catch (err) {
       console.log(err);
-      setError(err.response.data)
+      setError(err.response?.data)
       setIsUpdateTrue(false)
 
     }
