@@ -99,7 +99,7 @@ const SalesAnalytics = () => {
           <div className="flex items-center justify-between">
             <div>
               <p className="text-gray-500 text-sm">Average Growth</p>
-              <h3 className="text-2xl font-bold mt-1">{averageGrowth}%</h3>
+              <h3 className="text-2xl font-bold mt-1">{averageGrowth || 0}%</h3>
             </div>
             <div className="bg-purple-100 p-3 rounded-lg">
               <TrendingUp className="h-6 w-6 text-purple-600" />
