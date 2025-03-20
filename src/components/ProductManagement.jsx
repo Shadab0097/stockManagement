@@ -86,8 +86,8 @@ const ProductManagement = () => {
         setIsUpdateTrue(true)
         if (response.status === 200) {
           setIsToastVisible(true);
-          setEditingUser(false)
-          setShowModal(false); // Close modal
+          setEditingProduct(false)
+
 
 
         }
@@ -104,7 +104,7 @@ const ProductManagement = () => {
         });
         if (response.status === 200) {
           setIsToastVisible(true);
-          setShowModal(false); // Close modal
+
 
 
         }
@@ -115,7 +115,7 @@ const ProductManagement = () => {
       setFormData({ productName: '', emptyRecieved: 0, productPrice: '', stockQuantity: '' }); // Reset form
     } catch (err) {
       console.log(err);
-      setError(err.response.data)
+      setError(err.response?.data)
       setIsUpdateTrue(false)
 
     }
