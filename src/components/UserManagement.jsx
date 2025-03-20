@@ -127,7 +127,7 @@ const UserManagement = () => {
       firstName: user.firstName,
       lastName: user.lastName,
       emailId: user.emailId,
-      password: user.password,
+      password: '',
       role: user.role,
     });
     setGetUserId(user._id);
