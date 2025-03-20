@@ -87,6 +87,8 @@ const ProductManagement = () => {
         if (response.status === 200) {
           setIsToastVisible(true);
           setEditingUser(false)
+          setShowModal(false); // Close modal
+
 
         }
 
@@ -102,6 +104,8 @@ const ProductManagement = () => {
         });
         if (response.status === 200) {
           setIsToastVisible(true);
+          setShowModal(false); // Close modal
+
 
         }
         // dispatch(addUserManagement(response?.data)); // Dispatch new user to Redux store
