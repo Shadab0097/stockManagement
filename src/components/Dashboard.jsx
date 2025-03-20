@@ -117,11 +117,11 @@ const RecentSales = () => {
 };
 
 const Dashboard = () => {
-  const [totaldata, setTotalData] = useState([{
+  const [totaldata, setTotalData] = useState({
     totalSales: 0,
     totalProducts: 0,
     totalPayment: 0
-  }])
+  })
 
   const totalData = async () => {
     const data = await axios.get(BASE_URL + 'total-sales', { withCredentials: true })
