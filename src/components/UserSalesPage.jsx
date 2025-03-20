@@ -181,7 +181,7 @@ const UserSalesPage = () => {
     // Fetch sales data from the API
     const fetchSalesData = useCallback(async () => {
         try {
-            const response = await axios.get(`${BASE_URL}user/sale?page=${page}&limit=10`, {
+            const response = await axios.get(`${BASE_URL}user/sale?page=${page}&limit=50`, {
                 withCredentials: true,
             });
             const newSales = response?.data?.userSales || [];
