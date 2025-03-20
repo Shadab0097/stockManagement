@@ -150,7 +150,7 @@ const Dashboard = () => {
           <StatCard
             icon={<DollarSign className="h-6 w-6 text-blue-600" />}
             title="Total Revenue"
-            value={'₹' + totaldata.totalPayment}
+            value={'₹' + totaldata.totalPayment || 0}
             trend={15}
           />
           <StatCard
