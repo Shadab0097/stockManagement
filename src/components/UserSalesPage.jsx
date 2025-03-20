@@ -240,6 +240,11 @@ const UserSalesPage = () => {
         return <div className="p-4 text-red-500">{error}</div>;
     }
 
+
+    // Sort salesData by createdAt in descending order (newest first)
+    const sortedSalesData = [...salesData].sort((a, b) => {
+        return new Date(b.createdAt) - new Date(a.createdAt);
+    });
     return (
         <div className="p-4">
             <h1 className="text-2xl font-bold mb-6">Your Sales</h1>
@@ -285,7 +290,7 @@ const UserSalesPage = () => {
                             </tr>
                         </thead>
                         <tbody className="bg-white divide-y divide-gray-200">
-                            {salesData.map((sale, index) => (
+                            {sortedSalesData.map((sale, index) => (
                                 <tr key={index}>
                                     <td className="px-4 py-2 whitespace-nowrap text-sm text-gray-900">
                                         {sale.sellerName}
