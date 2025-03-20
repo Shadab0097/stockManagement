@@ -67,10 +67,11 @@ const UserProductPage = () => {
         // Convert numeric fields to numbers
         const numericFields = ['emptyQuantity', 'stockQuantity', 'productPrice'];
         const parsedValue = numericFields.includes(name) ? Number(value) : value;
+        const updatedValue = name === 'mode' ? value.toLowerCase() : parsedValue;
 
         setFormData(prev => ({
             ...prev,
-            [name]: parsedValue
+            [name]: updatedValue
         }));
     };
 
