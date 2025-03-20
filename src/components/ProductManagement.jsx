@@ -93,6 +93,7 @@ const ProductManagement = () => {
       } else {
         // Add new user
         setIsUpdateTrue(false)
+        setEditingProduct(false)
 
         const response = await axios.post(BASE_URL + 'addproduct', formData, {
           withCredentials: true,
