@@ -126,7 +126,7 @@ const Dashboard = () => {
 
   const totalData = async () => {
     const data = await axios.get(BASE_URL + 'total-sales', { withCredentials: true })
-    console.log(data)
+
     // dispatch(addTotalSales(data.data))
     setTotalData(data?.data)
   }

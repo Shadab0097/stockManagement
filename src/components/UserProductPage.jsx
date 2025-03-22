@@ -34,7 +34,7 @@ const UserProductPage = () => {
     const getallProduct = async () => {
         try {
             const response = await axios.get(BASE_URL + 'getallproduct', { withCredentials: true })
-            console.log(response)
+
             setProducts(response.data.data)
         } catch (err) {
             console.log(err)

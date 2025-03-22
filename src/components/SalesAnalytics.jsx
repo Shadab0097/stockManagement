@@ -18,11 +18,11 @@ const SalesAnalytics = () => {
   // ]);
 
   // console.log(getSales)
-  console.log(salesData)
+
   const getSalesSummary = async () => {
     try {
       const summary = await axios.get(BASE_URL + 'sales-summary', { withCredentials: true })
-      console.log(summary)
+
       dispatch(addSales(summary.data))
     } catch (err) {
       console.log(err)

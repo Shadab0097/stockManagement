@@ -32,7 +32,7 @@ const ProductManagement = () => {
   const getAllProduct = async () => {
     try {
       const response = await axios.get(BASE_URL + 'admin/getallproduct', { withCredentials: true });
-      console.log(response)
+
       dispatch(addProduct(response?.data?.data)); // Dispatch to Redux store
       // setUsers(getUser); // Update local state
     } catch (err) {
