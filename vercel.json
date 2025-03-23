@@ -2,11 +2,11 @@
     "version": 2,
     "rewrites": [
       {
-        "source": "/(login|logout|admin/login|admin/logout|total-sales|[^/]+-sales)",
+        "source": "/(login|logout|admin/login|admin/logout|total-sales|.*-sales)",
         "destination": "https://stock-management-backend-iota.vercel.app/:match"
       },
       {
-        "source": "/((?!_next|static|.*\\..*).*)",
+        "source": "/(.*)",
         "destination": "/index.html"
       }
     ],
