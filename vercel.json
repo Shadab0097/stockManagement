@@ -1,5 +1,12 @@
 {
-    "rewrites":[
-        {"source": "/(.*)"  , "destination" : "/"}
+    "rewrites": [
+        {
+            "source": "/(login|logout|admin/login|admin/logout)",  
+            "destination": "https://stock-management-backend-iota.vercel.app/:match"
+        },
+        {
+            "source": "/(.*)",  
+            "destination": "/"
+        }
     ]
 }
