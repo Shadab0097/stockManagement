@@ -2,15 +2,21 @@
     "version": 2,
     "rewrites": [
       {
-        "source": "/(login|logout|admin/login|admin/logout|total-sales|.*-sales)",
-        "destination": "https://stock-management-backend-iota.vercel.app/:match"
+        "source": "/(?<route>login|logout|admin/login|admin/logout|total-sales|.*-sales)",
+        "destination": "https://stock-management-backend-iota.vercel.app/:route"
       },
       {
-        "source": "/(.*)",
+        "source": "/((?!static|_next|api|.*\\..*).*)",
         "destination": "/index.html"
       }
     ],
     "headers": [
+      {
+        "source": "/(dashboard|users|products|sales|user/products|user/sales)",
+        "headers": [
+          { "key": "Cache-Control", "value": "no-store, max-age=0" }
+        ]
+      },
       {
         "source": "/_next/static/(.*)",
         "headers": [
@@ -19,4 +25,3 @@
       }
     ]
   }
-  
