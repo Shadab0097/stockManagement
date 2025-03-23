@@ -1,6 +1,21 @@
 {
-    "rewrites":[
-        {"source": "/(.*)"  
-        , "destination":"/"}
-]
-}
+    "version": 2,
+    "rewrites": [
+      {
+        "source": "/(login|logout|admin/login|admin/logout|total-sales|.*-sales)",
+        "destination": "https://stock-management-backend-iota.vercel.app/:match"
+      },
+      {
+        "source": "/((?!static|.*\\..*).*)",
+        "destination": "/index.html"
+      }
+    ],
+    "headers": [
+      {
+        "source": "/_next/static/(.*)",
+        "headers": [
+          { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        ]
+      }
+    ]
+  }
