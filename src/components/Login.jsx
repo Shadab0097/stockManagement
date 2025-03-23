@@ -38,7 +38,7 @@ const Login = () => {
 
 
         } catch (err) {
-            console.log(err)
+            console.log(err.message)
             setError(err.response.data)
 
             navigate('/login')
