@@ -76,6 +76,7 @@ const RecentSales = () => {
               <th className="pb-4 px-4">Product</th>
               <th className="pb-4 px-4">Quantity</th>
               <th className="pb-4 px-4">Customer</th>
+              <th className="pb-4 px-4">empty</th>
               <th className="pb-4 px-4">Address</th>
               <th className="pb-4 px-4">Amount</th>
               <th className="pb-4 px-4">Payment Mode</th> {/* New column */}
@@ -96,6 +97,7 @@ const RecentSales = () => {
                   <td className="py-4 px-4">{sale.productName}</td>
                   <td className="py-4 px-4">{sale.salesQuantity}</td>
                   <td className="py-4 px-4">{sale.buyerName}</td>
+                  <td className="py-4 px-4">{sale.emptyQuantity}</td>
                   <td className="py-4 px-4">{sale.buyerAddress}</td>
                   <td className="py-4 px-4">₹{sale.productPrice}</td>
                   <td className="py-4 px-4">{sale.paymentMode || "None"}</td> {/* New column */}
